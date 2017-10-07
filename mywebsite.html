@@ -7,13 +7,13 @@
 	<div id="video_box" onmouseover="showControls()" onmouseleave="hideControls()">
 		<video ondblclick="fullscreen()" onclick="playPause()" widht="600px" height="450px" id="my_video" src="video1.mp4"></video>
 		<div id="control_bar">
-			<button id="play_pause" onclick="playPause(this)"><img id="play" src="play.svg"><img id="pause" src="pause.svg"></button>
+			<button class="tooltip" id="play_pause" onclick="playPause(this)"><img id="play" src="play.svg"><img id="pause" src="pause.svg"><span class="tooltiptext">Play</span></button>
 			<div id="current_time"></div>
 			<div id="vid_length"></div>
 			<input oninput="changeTime()" onchange="changeTime()" type="range" step="0.001" min="0" max="100" value="0" id="slider">
-			<button id="volume_btn" onclick="mute()"><img id="volume_on" src="volume.svg"><img id="volume_off" src="volume_off.svg"></button>
+			<button class="tooltip" id="volume_btn" onclick="mute()"><img id="volume_on" src="volume.svg"><img id="volume_off" src="volume_off.svg"><span class="tooltiptext">Mute</span></button>
 			<input oninput="changeVolume()" onchange="changeVolume()" type="range" step="10" min="0" max="100" value="100" id="volume_slider">
-			<button id="fullscreen" onclick="fullscreen()"><img id="fullscreen1" src="fullscreen.svg"><img id="exit_fullscreen" src="exit_fullscreen.svg"></button>
+			<button class="tooltip" id="fullscreen" onclick="fullscreen()"><img id="fullscreen1" src="fullscreen.svg"><img id="exit_fullscreen" src="exit_fullscreen.svg"><span class="tooltiptext">Fullscreen</span></button>
 		</div>
 	<div>
 	</body>
