@@ -1,2 +1,2 @@
 # HTML5 custom video player
-![Screenshot](screenshot.png)
+![Screenshot](screenshot1.png)
