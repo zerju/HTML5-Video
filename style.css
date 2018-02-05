@@ -2,7 +2,7 @@
 	width: 600px;
 	height: 450px;
 	position: relative;
-	color:#f6a623;
+	color:#FFF;
 }
 #control_bar{
 	width: 100%;
@@ -72,7 +72,7 @@
 }
 button{
 	background-color: #2b3a42;
-	color: #f6a623;
+	color: #FFF;
 	display:inline-block;
 	height: 30px;
 	border: none;
@@ -100,7 +100,7 @@ input[type=range]::-webkit-slider-thumb {
   height: 12px;
   width: 12px;
   border-radius: 20px;
-  background: #f6a623;
+  background: #FFF;
   cursor: pointer; 
 	margin-top: -2px;
 }
@@ -121,7 +121,7 @@ input[type=range]::-moz-range-thumb {
   height: 12px;
   width: 12px;
   border-radius: 20px;
-  background: #f6a623;
+  background: #FFF;
   cursor: pointer;
 }
 
@@ -145,7 +145,7 @@ input[type=range]::-ms-thumb {
   height: 12px;
   width: 12px;
   border-radius: 20px;
-  background: #f6a623;
+  background: #FFF;
   cursor: pointer;
 }
 

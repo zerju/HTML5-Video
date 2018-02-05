@@ -1,10 +1,23 @@
+var timeout;
+
 window.onload = function(){
 	vid = document.getElementById('my_video');
 	document.getElementById('current_time').innerHTML = '00:00/';
 	document.getElementById('vid_length').innerHTML = formatTime(Math.floor(vid.duration));
 	document.getElementById('control_bar').style.width = vid.offsetWidth;
 };
+if (document.addEventListener) {
+    document.addEventListener('webkitfullscreenchange', exitHandler, false);
+    document.addEventListener('mozfullscreenchange', exitHandler, false);
+    document.addEventListener('fullscreenchange', exitHandler, false);
+    document.addEventListener('MSFullscreenChange', exitHandler, false);
+}
 
+document.onmousemove = function(){
+  clearTimeout(timeout);
+  showControls();
+  timeout = setTimeout(hideControls, 2000);
+}
 function startLoop() {
 	document.getElementById('current_time').innerHTML = formatTime(vid.currentTime)+'/';
 	myInterval = setInterval( function(){
@@ -65,7 +78,7 @@ function fullscreen() {
 		enterFullscreen();
 		document.getElementById('exit_fullscreen').style.display = 'inline-block';
 		document.getElementById('fullscreen1').style.display = 'none';
-	  document.getElementById('control_bar').style.width = window.innerWidth;
+	  document.getElementById('control_bar').style.width = window.innerWidth + 50;
 	}
   
 }
@@ -127,9 +140,3 @@ function exitHandler() {
 	}
 }
 
- if (document.addEventListener) {
-    document.addEventListener('webkitfullscreenchange', exitHandler, false);
-    document.addEventListener('mozfullscreenchange', exitHandler, false);
-    document.addEventListener('fullscreenchange', exitHandler, false);
-    document.addEventListener('MSFullscreenChange', exitHandler, false);
-}
